@@ -1,0 +1,54 @@
+.container {
+    position: relative;
+    padding: 0px 50px;
+    width: max-content;
+}
+
+.pen_container {
+    position: absolute;
+    left: calc(100% - 50px);
+    top: calc(50% - 17px);
+    display: flex;
+    align-items: center;
+    padding: 3px 8px;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 40px;
+    transition: all 0.3s;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+.pen_icon {
+    font-size: 24px;
+    margin-right: 8px;
+    color: #272848;
+}
+
+.pen_style_text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+@media (min-width: 1000px) {
+    .pen_container:hover {
+        background: #6D71F9;
+        width: 145px;
+
+        .pen_style_text {
+            color: white;
+        }
+
+        .pen_icon {
+            color: white;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .container {
+        padding: 0px 30px;
+    }
+}

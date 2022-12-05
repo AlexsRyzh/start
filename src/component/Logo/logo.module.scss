@@ -1,0 +1,23 @@
+.log_button {
+    color: white;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    position: relative;
+}
+
+
+.logo_img {
+    font-size: 32px;
+    margin-right: 10px;
+    height: min-content;
+    display: inline-block;
+}
+
+.logo_h1 {
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}

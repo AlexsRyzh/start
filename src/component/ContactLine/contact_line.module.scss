@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    gap: 10px;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        fill: white;
+        color: white;
+        transition: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.fb {
+    background: #1977F2;
+}
+
+.vk {
+    background: #1977F2;
+}
+
+.tg {
+    background: #1977F2;
+}
+
+.wt {
+    background: #41E360;
+}
+
+.mail {
+    background: #6D71F9;
+}
+
+
+
+.fb_icon {
+    height: 28px;
+}
+
+.vk_icon {
+    width: 30px;
+}
+
+.tg_icon {
+    width: 30px;
+}
+
+.wt_icon {
+    width: 30px;
+}
+
+.mail_icon {
+    font-size: 30px;
+}

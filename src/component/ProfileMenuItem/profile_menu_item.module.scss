@@ -1,0 +1,15 @@
+.profile_block {
+    display: flex;
+    gap: 10px;
+    color: #272848;
+    width: 100%;
+    padding: 7px 0 7px 16px;
+    align-items: center;
+    color: #272848;
+}
+
+.profile_block:hover {
+    background: #6D71F9;
+    color: white;
+    transition: 0.3s;
+}

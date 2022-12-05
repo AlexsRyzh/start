@@ -1,0 +1,45 @@
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 40px 40px 40px 40px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: 34px;
+    color: #272848;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter_button {
+    display: flex;
+    gap: 10px;
+}
+
+.icon_filter {}
+
+.filter_text {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.ripple_btn {
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+
+@media (max-width: 425px) {
+    .container {
+        padding: 40px 10px;
+    }
+}

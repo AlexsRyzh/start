@@ -1,0 +1,24 @@
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+    max-width: max-content;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #272848;
+}
+
+.hidden {
+    display: none;
+}

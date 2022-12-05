@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+
+.title {
+    color: #272848;
+    font-size: 14px;
+}
+
+.tickets {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.ticket {
+    padding: 5px 12px;
+    border-radius: 50px;
+    background: #272848;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket_text {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}

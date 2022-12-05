@@ -1,0 +1,44 @@
+.profile_button {
+    display: flex;
+    gap: 10px;
+    background: white;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 10px;
+    color: #272848;
+}
+
+.profile_check_button {
+    background: #6D71F9;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.profile_button:hover {
+    background: #6D71F9;
+    color: white;
+    transition: 0.2s;
+}
+
+.profile_img {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+
+.profile_text {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.profile_name {
+    font-weight: 900;
+}
+
+.profile_icon {
+    align-self: flex-end;
+    font-size: 24px;
+    margin-bottom: 3px;
+}

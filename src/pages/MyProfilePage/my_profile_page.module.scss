@@ -1,0 +1,136 @@
+.container {
+    width: 100%;
+    max-width: 860px;
+    border-right: 1px solid rgba(39, 40, 72, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 0 0 0;
+}
+
+.profile_icon {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        .change_container {
+            opacity: 1;
+        }
+    }
+}
+
+
+.profile_img {
+    width: 300px;
+    height: 300px;
+}
+
+
+.change_container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #6d72f98e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s;
+    opacity: 0;
+}
+
+.change_icon {
+    opacity: 0.8;
+    font-size: 120px;
+    color: white;
+}
+
+.name {
+    margin: 15px;
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.contact_title {
+    margin: 15px;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+@media (max-width: 550px) {
+    .name {
+        width: 200px;
+    }
+}
+
+.info_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 60px 40px 60px 40px;
+    border-radius: 100px 100px 0 0;
+    margin: 50px 0 0 0;
+    background: #272848;
+}
+
+.info_text {
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    text-transform: capitalize;
+    margin-right: 20px;
+    user-select: text;
+}
+
+.pen {
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
+.list_tickets_content {
+    padding: 15px 0 0 50px;
+}
+
+.info_section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.experience_container {
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.text_area {
+    resize: none;
+    width: 100%;
+    background: white;
+    margin-top: 20px;
+    border-radius: 15px;
+    outline: none;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+    width: 150px;
+    align-self: center;
+    height: 30px;
+    border-radius: 10px;
+    background: #6D71F9;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    user-select: text;
+}

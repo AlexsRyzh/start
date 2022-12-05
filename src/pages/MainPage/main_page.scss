@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background: #ECECEC;
+
+
+    .content {
+        display: flex;
+        max-width: 1440px;
+        margin: auto;
+        background: #FAFBFF;
+        min-height: calc(100vh - 60px);
+        align-items: stretch;
+    }
+
+}

@@ -1,0 +1,22 @@
+.tickets {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.ticket {
+    padding: 5px 12px;
+    border-radius: 50px;
+    background: #272848;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket_text {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
