@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './card_content.module.scss'
 import CardProfile from '../CardComponent/CardProfile/CardProfile';
 import CardText from '../CardComponent/CardText/CardText.styled'

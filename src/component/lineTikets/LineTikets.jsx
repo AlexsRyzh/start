@@ -4,11 +4,6 @@ import styles from './line_tikets.module.scss'
 const LineTikets = ({ listTicket, color, numberOf = 4, full = false }) => {
 
     const [list, setList] = useState(listTicket)
-    useEffect(() => {
-        if (!full)
-            resizeList(numberOf)
-    }, [numberOf])
-
     const resizeList = (count) => {
         if (count === listTicket.length) {
             setList(listTicket)
@@ -16,6 +11,12 @@ const LineTikets = ({ listTicket, color, numberOf = 4, full = false }) => {
             setList(listTicket.slice(0, numberOf))
         }
     }
+
+    useEffect(() => {
+        if (!full)
+            resizeList(numberOf)
+    }, [])
+
 
     return (
         <div className={styles.tickets}>

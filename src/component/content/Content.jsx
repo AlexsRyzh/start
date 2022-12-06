@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import styles from './content.module.scss'
-import InfiniteScroll from "react-infinite-scroll-component";
-import Card from '../Card/CardContent';
 import RippleButton from '../RippleButton/RippleButton'
 import { useContext } from 'react';
 import { Context } from '../../pages/MainPage/MainPage';
@@ -9,45 +7,9 @@ import BurgerMenu from '../BurgerMenuFilter/BurgerMenu';
 
 
 const Content = ({ title, children }) => {
-    const [items, setItems] = useState([]);
-    const [hasMore, sethasMore] = useState(true);
-    const [page, setpage] = useState(2);
     const [openFilter, setOpenFilter] = useState(false)
     const value = useContext(Context)
 
-    useEffect(() => {
-        const getComments = async () => {
-            const res = await fetch(
-                `https://jsonplaceholder.typicode.com/comments?_page=1&_limit=20`
-                // For json server use url below
-                // `http://localhost:3004/comments?_page=1&_limit=20`
-            );
-            const data = await res.json();
-            setItems(data);
-        };
-
-        getComments();
-    }, []);
-
-    const fetchComments = async () => {
-        const res = await fetch(
-            `https://jsonplaceholder.typicode.com/comments?_page=${page}&_limit=20`
-            // For json server use url below
-            // `http://localhost:3004/comments?_page=${page}&_limit=20`
-        );
-        const data = await res.json();
-        return data;
-    };
-
-    const fetchData = async () => {
-        const commentsFormServer = await fetchComments();
-
-        setItems([...items, ...commentsFormServer]);
-        if (commentsFormServer.length === 0 || commentsFormServer.length < 20) {
-            sethasMore(false);
-        }
-        setpage(page + 1);
-    };
 
     return (
         <div className={styles.container}>
