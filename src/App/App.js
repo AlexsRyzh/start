@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route, BrowserRouter, useLocation } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { useLayoutEffect } from 'react';
 import { MainPage } from '../pages/MainPage/MainPage';
 import ListProjectPage from '../pages/ListProjectPage/ListProjectPage';
@@ -9,7 +9,6 @@ import MyProjectsPage from '../pages/MyProjects/MyProjectsPage'
 import ProjectPage from '../pages/ProjectPage/ProjectPage';
 
 const Wrapper = ({ children }) => {
-    const location = useLocation();
     useLayoutEffect(() => {
         document.documentElement.scrollTo(0, 0);
     });

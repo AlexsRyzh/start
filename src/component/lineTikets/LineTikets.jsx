@@ -15,7 +15,7 @@ const LineTikets = ({ listTicket, color, numberOf = 4, full = false }) => {
     useEffect(() => {
         if (!full)
             resizeList(numberOf)
-    }, [])
+    }, [numberOf])
 
 
     return (
