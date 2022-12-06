@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter, BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MainPage } from '../pages/MainPage/MainPage';
 import ListProjectPage from '../pages/ListProjectPage/ListProjectPage';
 import ListProfilesPage from '../pages/ListProfilesPage/ListProfilesPage';
@@ -9,7 +9,7 @@ import ProjectPage from '../pages/ProjectPage/ProjectPage';
 
 const App = () => {
     return (
-        <HashRouter>
+        <BrowserRouter>
             <Routes>
                 <Route path='/' element={<MainPage />}>
                     <Route index element={<ListProjectPage />} />
@@ -18,10 +18,10 @@ const App = () => {
                 </Route>
                 <Route path='/' element={<MainPage filter={false} />}>
                     <Route path='/my-profile' element={<MyProfilePage />} />
-                    <Route path='/project' element={<h1>sfjsfs</h1>} />
+                    <Route path='/project' element={<ProjectPage />} />
                 </Route>
             </Routes>
-        </HashRouter>
+        </BrowserRouter>
     )
 }
 
