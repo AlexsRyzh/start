@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/start/static/css/main.bbfd34d5.css",
-    "main.js": "/start/static/js/main.8ca1a800.js",
-    "static/media/profImg.png": "/start/static/media/profImg.e34d033791ab24d2812e.png",
-    "static/media/tg.svg": "/start/static/media/tg.8633fc822c4b0ccdf061056823d64ef5.svg",
-    "static/media/whatsap.svg": "/start/static/media/whatsap.4a02c9b66e6f1e825e2b29e35a258274.svg",
-    "static/media/vk.svg": "/start/static/media/vk.934ebbbf9fea71dd7cc5206ece48e970.svg",
-    "index.html": "/start/index.html",
-    "static/media/facebook.svg": "/start/static/media/facebook.535b38094da1c05676cc19121c57531b.svg",
-    "main.bbfd34d5.css.map": "/start/static/css/main.bbfd34d5.css.map",
-    "main.8ca1a800.js.map": "/start/static/js/main.8ca1a800.js.map"
+    "main.css": "/Start/static/css/main.8127d0cb.css",
+    "main.js": "/Start/static/js/main.e2b800d0.js",
+    "static/media/profImg.png": "/Start/static/media/profImg.e34d033791ab24d2812e.png",
+    "static/media/tg.svg": "/Start/static/media/tg.8633fc822c4b0ccdf061056823d64ef5.svg",
+    "static/media/whatsap.svg": "/Start/static/media/whatsap.4a02c9b66e6f1e825e2b29e35a258274.svg",
+    "static/media/vk.svg": "/Start/static/media/vk.934ebbbf9fea71dd7cc5206ece48e970.svg",
+    "index.html": "/Start/index.html",
+    "static/media/facebook.svg": "/Start/static/media/facebook.535b38094da1c05676cc19121c57531b.svg",
+    "main.8127d0cb.css.map": "/Start/static/css/main.8127d0cb.css.map",
+    "main.e2b800d0.js.map": "/Start/static/js/main.e2b800d0.js.map"
   },
   "entrypoints": [
-    "static/css/main.bbfd34d5.css",
-    "static/js/main.8ca1a800.js"
+    "static/css/main.8127d0cb.css",
+    "static/js/main.e2b800d0.js"
   ]
 }
