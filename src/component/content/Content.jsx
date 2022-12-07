@@ -1,15 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './content.module.scss'
 import RippleButton from '../RippleButton/RippleButton'
 import { useContext } from 'react';
 import { Context } from '../../pages/MainPage/MainPage';
 import BurgerMenu from '../BurgerMenuFilter/BurgerMenu';
-
+import { useScrollLock } from '../../hooks/useScrollLock';
 
 const Content = ({ title, children }) => {
     const [openFilter, setOpenFilter] = useState(false)
     const value = useContext(Context)
+    const { lockScroll, unlockScroll } = useScrollLock();
 
+
+    useEffect(() => {
+        if (openFilter) {
+            lockScroll()
+        } else {
+            unlockScroll()
+        }
+    }, [openFilter])
 
     return (
         <div className={styles.container}>

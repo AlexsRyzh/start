@@ -13,6 +13,7 @@ const Context = createContext()
 const MainPage = ({ filter = true }) => {
 
     const [windowSize, setWindow] = useState();
+    const [hidde, setHidde] = useState(true)
 
     const handleSubscribe = () => {
         setWindow(window.innerWidth)
@@ -29,17 +30,18 @@ const MainPage = ({ filter = true }) => {
         handleSubscribe()
         return () => offSubscribe()
     }, [])
-
     return (
         <Context.Provider value={
             {
                 'windowSize': windowSize,
-                'img': profile_img
+                'img': profile_img,
+                'hidd': hidde,
+                'setHidd': setHidde
             }
         }>
             <div className={'container'}>
                 <Header />
-                <main >
+                <main>
                     <div className='content'>
                         {windowSize > 768 &&
                             <Nav />

@@ -5,11 +5,32 @@ import ProfileButton from '../ProfileButton/ProfileButton';
 import { Context } from '../../pages/MainPage/MainPage';
 import Burger from '../BurgerIcon/Burger';
 import BurgerNave from '../BurgerMenuNav/BurgerNave';
+import { useEffect } from 'react';
+import { useScrollLock } from '../../hooks/useScrollLock';
 
 const Header = ({ name = "Alexs" }) => {
 
   const value = useContext(Context)
   const [active, setActive] = useState(false)
+
+  const { lockScroll, unlockScroll } = useScrollLock();
+
+  useEffect(() => {
+    if (value['hidd']) {
+      setActive(false)
+      value['setHidd'](false)
+    }
+
+  }, [value['hidd']])
+
+  useEffect(() => {
+    if (active) {
+      lockScroll()
+    } else {
+      unlockScroll()
+    }
+  }, [active])
+
 
   return (
     <>

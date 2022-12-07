@@ -26,12 +26,12 @@ const App = () => {
         <BrowserRouter>
             <Wrapper />
             <Routes>
-                <Route path='/' element={<MainPage />} onUpdate={() => window.scrollTo(0, 0)}>
+                <Route path='/' element={<MainPage />}>
                     <Route index element={<ListProjectPage />} />
                     <Route path='/profiles' element={<ListProfilesPage />} />
                     <Route path='/my-projects' element={<MyProjectsPage />} />
                 </Route>
-                <Route onUpdate={() => window.scrollTo(0, 0)} path='/' element={<MainPage filter={false} />}>
+                <Route path='/' element={<MainPage filter={false} />}>
                     <Route path='/my-profile' element={<MyProfilePage />} />
                     <Route path='/project' element={<ProjectPage />} />
                     <Route path='/profile' element={<ProfilePage />} />
