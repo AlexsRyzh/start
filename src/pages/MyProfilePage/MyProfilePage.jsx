@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useContext } from 'react'
 import BlockWithPen from '../../component/BlockWithPen/BlockWithPen'
 import ContactLine from '../../component/ContactLine/ContactLine'
@@ -6,7 +6,6 @@ import { Context } from '../MainPage/MainPage'
 import LineTikets from '../../component/lineTikets/LineTikets'
 import styles from './my_profile_page.module.scss'
 import RippleButton from '../../component/RippleButton/RippleButton'
-
 
 const MyProfilePage = ({ img = {}, name = 'Alexander', surname = 'Chapchuk' }) => {
     const value = useContext(Context)
