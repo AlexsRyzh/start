@@ -7,6 +7,7 @@ import ListProfilesPage from '../pages/ListProfilesPage/ListProfilesPage';
 import MyProfilePage from '../pages/MyProfilePage/MyProfilePage';
 import MyProjectsPage from '../pages/MyProjects/MyProjectsPage'
 import ProjectPage from '../pages/ProjectPage/ProjectPage';
+import ProfilePage from '../pages/ProfilePage/ProfilePage'
 
 const Wrapper = ({ children }) => {
     useLayoutEffect(() => {
@@ -28,6 +29,7 @@ const App = () => {
                     <Route path='/' element={<MainPage filter={false} />}>
                         <Route path='/my-profile' element={<MyProfilePage />} />
                         <Route path='/project' element={<ProjectPage />} />
+                        <Route path='/profile' element={<ProfilePage />} />
                     </Route>
                 </Routes>
             </Wrapper>
