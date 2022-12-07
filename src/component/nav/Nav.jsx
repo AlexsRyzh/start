@@ -2,9 +2,11 @@ import React from 'react'
 import styles from './nav.module.scss'
 import RippleButton from '../RippleButton/RippleButton'
 import { Link } from 'react-router-dom'
-
+import { useContext } from 'react'
+import { Context } from '../../pages/MainPage/MainPage'
 
 const Nav = ({ SetClick = (elem) => { return; } }) => {
+    const value = useContext(Context)
     return (
         <div className={styles['nav_container']}>
             <div className={styles['mini_container']} onClick={() => SetClick(false)}>
@@ -38,6 +40,16 @@ const Nav = ({ SetClick = (elem) => { return; } }) => {
                         <p className={styles.text}>Мои идеи</p>
                     </RippleButton>
                 </Link>
+                {value['windowSize'] < 769 &&
+                    <Link to='/my-profile'>
+                        <RippleButton className={styles.button} opacity={0.2}>
+                            <span className={"material-symbols-rounded " + styles.icon + " " + styles['icon2']}>
+                                account_circle
+                            </span>
+                            <p className={styles.text}>Профиль</p>
+                        </RippleButton>
+                    </Link>
+                }
             </div>
         </div>
     )

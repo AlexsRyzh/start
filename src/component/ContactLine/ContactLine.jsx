@@ -4,7 +4,7 @@ import { ReactComponent as FB } from '../../svg/facebook.svg'
 import { ReactComponent as VK } from '../../svg/vk.svg'
 import { ReactComponent as TG } from '../../svg/tg.svg'
 import { ReactComponent as WT } from '../../svg/whatsap.svg'
-
+import { ReactComponent as Gt } from '../../svg/github.svg'
 
 const ContactLine = () => {
     return (
@@ -25,6 +25,9 @@ const ContactLine = () => {
                 <span className={"material-symbols-rounded " + styles['mail_icon']}>
                     mail
                 </span>
+            </div>
+            <div className={styles['github']}>
+                <Gt className={styles['github_icon']} />
             </div>
         </div>
     )

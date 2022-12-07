@@ -3,7 +3,7 @@ import styles from './ProfileCard.module.scss'
 import CardText from '../CardComponent/CardText/CardText.styled'
 import CardTicket from '../CardComponent/CardTIcket/CardTicket'
 import { Context } from '../../pages/MainPage/MainPage'
-import imgProfile from '../ProfileButton/img/profImg.png'
+import imgProfile from '../../img/profImg.png'
 
 const ProfileCard = ({ name = "Alexs", surname = 'Chapchuk', img = imgProfile }) => {
     const value = useContext(Context)

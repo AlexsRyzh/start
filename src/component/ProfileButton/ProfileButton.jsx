@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './ProfileButton.module.scss'
-import profileImg from './img/profImg.png'
+import profileImg from '../../img/profImg.png'
 import RippleButton from '../RippleButton/RippleButton'
 import DropMenuContainer from '../DropMenu/DropMenu'
 import ClickAwayListener from 'react-click-away-listener';

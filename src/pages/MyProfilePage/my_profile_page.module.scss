@@ -63,11 +63,6 @@
     font-weight: 500;
 }
 
-@media (max-width: 550px) {
-    .name {
-        width: 200px;
-    }
-}
 
 .info_content {
     display: flex;
@@ -79,6 +74,17 @@
     background: #272848;
 }
 
+@media (max-width: 550px) {
+    .name {
+        width: 200px;
+    }
+
+    .info_content {
+        padding: 60px 10px 60px 10px;
+    }
+}
+
+
 .info_text {
     font-size: 24px;
     font-family: 'Inter', sans-serif;
@@ -86,25 +92,35 @@
     text-transform: capitalize;
     margin-right: 20px;
     user-select: text;
+    flex-shrink: 0;
+}
+
+@media (max-width: 500px) {
+    .info_text {
+        font-size: 20px;
+    }
 }
 
 .pen {
     color: rgba(255, 255, 255, 0.6);
-
+    flex-shrink: 0;
 }
 
 .list_tickets_content {
-    padding: 15px 0 0 50px;
+    padding: 15px 0 0 30px;
+    flex-shrink: 0;
 }
 
 .info_section {
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
     margin-top: 20px;
 }
 
 .experience_container {
-    margin-left: 50px;
+    margin-left: 30px;
     margin-top: 30px;
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import imgProfile from '../../ProfileButton/img/profImg.png'
+import imgProfile from '../../../img/profImg.png'
 import styles from './card_profile.module.scss'
 
 
@@ -8,6 +8,7 @@ function CardProfile({ img = imgProfile, name = 'Alexander', surname = 'Chapchuk
         <div className={styles.container}>
             <img src={img} alt="" className={styles.img} />
             <p className={styles.text}>{name} {surname}</p>
+
         </div>
     )
 }

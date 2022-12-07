@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from './line_tikets.module.scss'
 
-const LineTikets = ({ listTicket, color, numberOf = 4, full = false }) => {
+const LineTikets = ({ listTicket, color, numberOf = 4, full = false, fontSize }) => {
 
     const [list, setList] = useState(listTicket)
     const resizeList = (count) => {
@@ -24,7 +24,9 @@ const LineTikets = ({ listTicket, color, numberOf = 4, full = false }) => {
                 <div className={styles.ticket} key={index} style={{
                     background: color
                 }}>
-                    <p className={styles.ticket_text}>{ticket}</p>
+                    <p className={styles.ticket_text} style={{
+                        fontSize: fontSize
+                    }}>{ticket}</p>
                 </div>
             ))}
             {list.length !== listTicket.length &&

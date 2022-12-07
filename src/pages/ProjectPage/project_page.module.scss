@@ -1,6 +1,30 @@
-.container{
+.container {
   display: flex;
   max-width: 860px;
   width: 100%;
-  border-right: 1px solid ;
+  border-right: 1px solid rgba(39, 40, 72, 0.2);
+  padding: 40px 20px 40px 20px;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Inter', sans-serif;
+
+  .title {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  .title_description {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 16px;
+
+  }
+
+}
+
+.contact {
+  display: flex;
 }

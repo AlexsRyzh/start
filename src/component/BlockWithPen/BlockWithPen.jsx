@@ -6,12 +6,12 @@ const BlockWithPen = ({ children, className }) => {
     return (
         <div className={styles['container']}>
             {children}
-            <span className={styles['pen_container']}>
-                <span className={"material-symbols-outlined " + styles['pen_icon'] + " " + className}>
+            <div className={styles['pen_container']}>
+                <div className={"material-symbols-outlined " + styles['pen_icon'] + " " + className}>
                     edit
-                </span>
+                </div>
                 <p className={styles['pen_style_text']}>Изменить</p>
-            </span>
+            </div>
         </div>
     )
 }

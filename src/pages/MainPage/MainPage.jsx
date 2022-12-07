@@ -6,7 +6,7 @@ import './main_page.scss'
 import '../../fonts/fonts.scss'
 import { useEffect } from 'react'
 import { Outlet } from "react-router-dom";
-import profile_img from '../../component/ProfileButton/img/profImg.png'
+import profile_img from '../../img/profImg.png'
 
 const Context = createContext()
 

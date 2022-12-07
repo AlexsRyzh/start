@@ -1,6 +1,10 @@
 .container {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
 
     div {
         display: flex;
@@ -40,6 +44,10 @@
     background: #6D71F9;
 }
 
+.github {
+    background: black;
+}
+
 
 
 .fb_icon {
@@ -60,4 +68,8 @@
 
 .mail_icon {
     font-size: 30px;
+}
+
+.github_icon {
+    width: 30px;
 }
