@@ -5,7 +5,7 @@ import ContactLine from '../../component/ContactLine/ContactLine'
 import { useState } from 'react'
 import BlockWithPen from '../../component/BlockWithPen/BlockWithPen'
 import LineTikets from '../../component/lineTikets/LineTikets'
-
+import RippleButton from '../../component/RippleButton/RippleButton'
 
 const MyProject = () => {
     const [title, setTitle] = useState('DevBuff')
@@ -58,6 +58,9 @@ const MyProject = () => {
                     <LineTikets listTicket={['JAVA', 'JAVASCRIPT']} color={'#272848'} full={true} fontSize={'14px'} />
                 </div>
             </div>
+            <RippleButton colorRipple={'#fff'} className={styles['btn']} opacity={0.2}>
+                Сохранить
+            </RippleButton>
         </div>
     )
 }

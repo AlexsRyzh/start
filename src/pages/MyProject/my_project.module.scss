@@ -53,3 +53,18 @@ textarea {
     margin-top: 20px;
     margin-left: 10px;
 }
+
+.btn {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+    width: 150px;
+    align-self: center;
+    height: 30px;
+    border-radius: 10px;
+    background: #6D71F9;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    user-select: text;
+}
