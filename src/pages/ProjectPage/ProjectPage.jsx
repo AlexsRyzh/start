@@ -7,7 +7,7 @@ import ContactLine from '../../component/ContactLine/ContactLine'
 import CardTicket from '../../component/CardComponent/CardTIcket/CardTicket'
 import ImgSlider from '../../component/imgSlider/ImgSlider'
 
-const ProjectPage = ({ view = false, title = 'DevBuff' }) => {
+const ProjectPage = ({ title = 'DevBuff' }) => {
 
 
   return (

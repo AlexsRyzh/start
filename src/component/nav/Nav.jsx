@@ -32,7 +32,7 @@ const Nav = ({ SetClick = (elem) => { return; } }) => {
                     background: 'rgba(39, 40, 72, 0.2)',
                     margin: '20px 0 20px 0'
                 }} />
-                <Link to='/my-project'>
+                <Link to='/my-projects'>
                     <RippleButton className={styles.button} opacity={0.2}>
                         <span className={"material-symbols-rounded " + styles.icon + " " + styles['icon2']}>
                             local_fire_department

@@ -8,6 +8,7 @@ import MyProfilePage from '../pages/MyProfilePage/MyProfilePage';
 import MyProjectsPage from '../pages/MyProjects/MyProjectsPage'
 import ProjectPage from '../pages/ProjectPage/ProjectPage';
 import ProfilePage from '../pages/ProfilePage/ProfilePage'
+import MyProject from '../pages/MyProject/MyProject';
 
 const Wrapper = ({ children }) => {
     useLayoutEffect(() => {
@@ -24,12 +25,13 @@ const App = () => {
                     <Route path='/' element={<MainPage />}>
                         <Route index element={<ListProjectPage />} />
                         <Route path='/profiles' element={<ListProfilesPage />} />
-                        <Route path='/my-project' element={<MyProjectsPage />} />
+                        <Route path='/my-projects' element={<MyProjectsPage />} />
                     </Route>
                     <Route path='/' element={<MainPage filter={false} />}>
                         <Route path='/my-profile' element={<MyProfilePage />} />
                         <Route path='/project' element={<ProjectPage />} />
                         <Route path='/profile' element={<ProfilePage />} />
+                        <Route path='/my-project' element={<MyProject />} />
                     </Route>
                 </Routes>
             </Wrapper>
