@@ -1,6 +1,6 @@
 import React from 'react'
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import { useLayoutEffect } from 'react';
+import { Routes, Route, BrowserRouter, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { MainPage } from '../pages/MainPage/MainPage';
 import ListProjectPage from '../pages/ListProjectPage/ListProjectPage';
 import ListProfilesPage from '../pages/ListProfilesPage/ListProfilesPage';
@@ -10,32 +10,36 @@ import ProjectPage from '../pages/ProjectPage/ProjectPage';
 import ProfilePage from '../pages/ProfilePage/ProfilePage'
 import MyProject from '../pages/MyProject/MyProject';
 
-const Wrapper = ({ children }) => {
-    useLayoutEffect(() => {
-        document.documentElement.scrollTo(0, 0);
+const Wrapper = ({ }) => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
     });
-    return children
+
+    return null;
 }
 
 const App = () => {
+
     return (
         <BrowserRouter>
-            <Wrapper>
-                <Routes>
-                    <Route path='/' element={<MainPage />}>
-                        <Route index element={<ListProjectPage />} />
-                        <Route path='/profiles' element={<ListProfilesPage />} />
-                        <Route path='/my-projects' element={<MyProjectsPage />} />
-                    </Route>
-                    <Route path='/' element={<MainPage filter={false} />}>
-                        <Route path='/my-profile' element={<MyProfilePage />} />
-                        <Route path='/project' element={<ProjectPage />} />
-                        <Route path='/profile' element={<ProfilePage />} />
-                        <Route path='/my-project' element={<MyProject />} />
-                    </Route>
-                </Routes>
-            </Wrapper>
+            <Wrapper />
+            <Routes>
+                <Route path='/' element={<MainPage />} onUpdate={() => window.scrollTo(0, 0)}>
+                    <Route index element={<ListProjectPage />} />
+                    <Route path='/profiles' element={<ListProfilesPage />} />
+                    <Route path='/my-projects' element={<MyProjectsPage />} />
+                </Route>
+                <Route onUpdate={() => window.scrollTo(0, 0)} path='/' element={<MainPage filter={false} />}>
+                    <Route path='/my-profile' element={<MyProfilePage />} />
+                    <Route path='/project' element={<ProjectPage />} />
+                    <Route path='/profile' element={<ProfilePage />} />
+                    <Route path='/my-project' element={<MyProject />} />
+                </Route>
+            </Routes>
         </BrowserRouter>
+
     )
 }
 
