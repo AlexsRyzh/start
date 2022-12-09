@@ -92,3 +92,16 @@
         height: 10px;
     }
 }
+
+.add_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    background: #272848;
+}
+
+.img_add {
+    font-size: 120px;
+    color: white;
+}

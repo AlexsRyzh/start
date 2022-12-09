@@ -4,6 +4,7 @@ import img from '../../img/profImg.png'
 import ContactLine from '../../component/ContactLine/ContactLine'
 import LineTikets from '../../component/lineTikets/LineTikets'
 import RippleButton from '../../component/RippleButton/RippleButton'
+import { Fb, Gt, Mail, Tg, Vk, Wt } from '../../component/ContactButton/ContactButton'
 
 const ProfilePage = () => {
     return (
@@ -11,7 +12,19 @@ const ProfilePage = () => {
             <img src={img} className={styles['prof_img']} alt="" />
             <h1 className={styles['name']}>Alexander Chapchuk</h1>
             <h2 className={styles['contact_title']}>Контакты</h2>
-            <ContactLine />
+
+
+
+            <ContactLine>
+                <Fb />
+                <Tg />
+                <Vk />
+                <Wt />
+                <Mail />
+                <Gt />
+            </ContactLine>
+
+
             <div className={styles['info_content']}>
                 <div className={styles['info_section']}>
                     <h2 className={styles['info_text']}>Профессии</h2>

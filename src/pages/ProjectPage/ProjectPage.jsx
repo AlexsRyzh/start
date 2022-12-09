@@ -14,10 +14,9 @@ const ProjectPage = ({ title = 'DevBuff' }) => {
     <div className={styles['container']}>
       <CardProfile />
       <h1 className={styles['title']}>{title}</h1>
-      <h2 className={styles['title_description']}>Описание:</h2>
       <p className={styles['description']}>DevBuff - это площадка где разработчики разных специальностей могут находит друг друга и создавать проекты совместно. DevBuff - это площадка где разработчики разных специальностей могут находит друг друга и создавать проекты совместно. DevBuff - это площадка где разработчики разных специальностей могут находит друг друга и создавать проекты совместно. </p>
       <h2 className={styles['title_description']}>Фото:</h2>
-      <ImgSlider />
+      <ImgSlider id={0} />
       <h2 className={styles['title_description']}>Контакты:</h2>
       <div className={styles['contact']}>
         <ContactLine />

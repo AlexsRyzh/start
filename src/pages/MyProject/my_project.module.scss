@@ -13,9 +13,40 @@
         font-size: 40px;
         font-weight: 600;
         text-transform: capitalize;
-        border-bottom: 2px solid #6D71F9;
-        padding: 0 10px 10px 10px;
+        border: 2px solid #6D71F9;
+        border-radius: 20px;
+        padding: 10px 10px 10px 20px;
         width: inherit;
+        position: relative;
+    }
+
+    .title_container {
+        width: inherit;
+        position: relative;
+    }
+
+    .title_container::before,
+    .description::before {
+        content: "Название";
+        display: block;
+        position: absolute;
+        top: -12px;
+        left: 20px;
+        padding: 3px 10px;
+        color: white;
+        border-radius: 10px;
+        background: #6D71F9;
+        z-index: 1;
+    }
+
+    .placehold::after {
+        content: "Описание";
+        font-size: 16px;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        color: #757575;
+        display: block;
     }
 
     .title_description {
@@ -26,11 +57,16 @@
 
     .description {
         font-size: 16px;
-        padding: 10px;
-        border-top: 2px solid #6D71F9;
-        border-bottom: 2px solid #6D71F9;
+        padding: 20px;
+        border: 2px solid #6D71F9;
         outline: none;
         width: inherit;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    .description::before {
+        content: "Описание";
     }
 
     .section {

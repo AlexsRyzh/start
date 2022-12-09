@@ -6,6 +6,7 @@ import { Context } from '../MainPage/MainPage'
 import LineTikets from '../../component/lineTikets/LineTikets'
 import styles from './my_profile_page.module.scss'
 import RippleButton from '../../component/RippleButton/RippleButton'
+import { Fb, Gt, Mail, Tg, Vk, Wt } from '../../component/ContactButton/ContactButton'
 
 const MyProfilePage = ({ img = {}, name = 'Alexander', surname = 'Chapchuk' }) => {
     const value = useContext(Context)
@@ -30,7 +31,14 @@ const MyProfilePage = ({ img = {}, name = 'Alexander', surname = 'Chapchuk' }) =
                 <h2 className={styles['contact_title']}>Контакты</h2>
             </BlockWithPen>
 
-            <ContactLine />
+            <ContactLine>
+                <Fb />
+                <Tg />
+                <Vk />
+                <Wt />
+                <Mail />
+                <Gt />
+            </ContactLine>
 
 
 

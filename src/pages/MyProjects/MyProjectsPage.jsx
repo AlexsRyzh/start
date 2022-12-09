@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const MyProjectPage = () => {
     let arr = (new Array(10)).fill(0)
     return (
-        <Content title={"Мои проекты"}>
+        <Content title={"Мои проекты"} edit={true}>
             {arr.map((value, index) => (
                 <Link to='/my-project' key={index}>
                     <Card />

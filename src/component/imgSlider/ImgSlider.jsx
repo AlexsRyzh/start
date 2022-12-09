@@ -6,9 +6,9 @@ import img1 from '../../img/gall3.jpg'
 import img2 from '../../img/gallery1.jpg'
 import img3 from '../../img/gall4.webp'
 
-const ImgSlider = () => {
+const ImgSlider = ({ id = 0 }) => {
     const [slideIndex, setSlideIndex] = useState(1)
-    const dataSlider = [img1, img2, img3]
+    const dataSlider = id !== -1 ? [img1, img2, img3] : []
 
 
     const nextSlide = () => {
@@ -43,12 +43,19 @@ const ImgSlider = () => {
                             key={index}
                             className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
                         >
-                            <img
-                                src={obj}
-                            />
+                            <img src={obj} />
+
                         </div>
                     )
                 })}
+                {
+                    dataSlider.length === 0 &&
+                    <div className='add_img'>
+                        <span className="material-symbols-rounded img_add">
+                            Пусто
+                        </span>
+                    </div>
+                }
                 <BtnSlider moveSlide={nextSlide} direction={"next"} />
                 <BtnSlider moveSlide={prevSlide} direction={"prev"} />
 
