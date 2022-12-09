@@ -104,3 +104,9 @@ textarea {
     font-family: 'Inter', sans-serif;
     user-select: text;
 }
+
+@media (max-width: 375px) {
+    .title_description {
+        width: min-content;
+    }
+}

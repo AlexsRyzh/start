@@ -3,15 +3,16 @@ import styles from './content.module.scss'
 import RippleButton from '../RippleButton/RippleButton'
 import { useContext } from 'react';
 import { Context } from '../../pages/MainPage/MainPage';
-import BurgerMenu from '../BurgerMenuFilter/BurgerMenu';
+import BurgerMenuFilter from '../BurgerMenuFilter/BurgerMenuFilter';
 import { useScrollLock } from '../../hooks/useScrollLock';
 import { Link } from 'react-router-dom';
+import { useRef } from 'react';
 
 const Content = ({ title, children, edit = false }) => {
     const [openFilter, setOpenFilter] = useState(false)
     const value = useContext(Context)
     const { lockScroll, unlockScroll } = useScrollLock();
-
+    const nodeRef = useRef(null)
 
     useEffect(() => {
         if (openFilter) {
@@ -53,7 +54,8 @@ const Content = ({ title, children, edit = false }) => {
                 </div>
 
             </div>
-            <BurgerMenu open={openFilter} setOpen={setOpenFilter} />
+            <BurgerMenuFilter open={openFilter} setOpen={setOpenFilter} />
+
             {/* <InfiniteScroll
                 dataLength={items.length} //This is important field to render the next data
                 next={fetchData}

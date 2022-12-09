@@ -1,14 +1,14 @@
 import React from 'react'
 import styles from './block_with_pen.module.scss'
 
-const BlockWithPen = ({ children, className, DisleftPadding = false }) => {
+const BlockWithPen = ({ children, className, DisleftPadding = false, onClick = f => { } }) => {
 
     return (
         <div className={styles['container']} style={{
             paddingLeft: (DisleftPadding && 0)
         }}>
             {children}
-            <div className={styles['pen_container']}>
+            <div className={styles['pen_container']} onClick={onClick}>
                 <div className={"material-symbols-outlined " + styles['pen_icon'] + " " + className}>
                     edit
                 </div>
