@@ -7,10 +7,14 @@ import BlockWithPen from '../../component/BlockWithPen/BlockWithPen'
 import LineTikets from '../../component/lineTikets/LineTikets'
 import RippleButton from '../../component/RippleButton/RippleButton'
 import ContentEditable from 'react-contenteditable'
+import Modal from '../../component/Modal/Modal'
+import AddImg from '../../component/AddImg/AddImg'
 
 const MyProject = ({ id = -1 }) => {
     const [title, setTitle] = useState(id === -1 ? "" : 'DevBuff')
     const [desc, setDesc] = useState(id === -1 ? "" : 'DevBuff - это площадка где разработчики разных специальностей могут находит друг друга и создавать проекты совместно. DevBuff - это площадка где разработчики разных специальностей могут находит друг друга и создавать проекты совместно. DevBuff - это площадка где разработчики разных специальностей могут находит друг друга и создавать проекты совместно.')
+    const [openModal, setOpenModal] = useState(0)
+    const [moduleTitle, setModuleTitle] = useState('')
 
     const contentEditableRef = useRef(null);
 
@@ -29,7 +33,10 @@ const MyProject = ({ id = -1 }) => {
 
             <ContentEditable className={styles['description'] + ' ' + (desc.length === 0 && styles['placehold'])} innerRef={contentEditableRef} html={desc} onChange={handleChange} />
             <div className={styles['section']}>
-                <BlockWithPen DisleftPadding={true}>
+                <BlockWithPen DisleftPadding={true} onClick={() => {
+                    setModuleTitle('Добавление картинок')
+                    setOpenModal(1)
+                }}>
                     <h2 className={styles['title_description']}>Фото</h2>
                 </BlockWithPen>
             </div>
@@ -71,6 +78,9 @@ const MyProject = ({ id = -1 }) => {
             <RippleButton colorRipple={'#fff'} className={styles['btn']} opacity={0.2}>
                 Сохранить
             </RippleButton>
+            <Modal open={openModal} setOpen={() => { setOpenModal(false) }} title={moduleTitle}>
+                <AddImg />
+            </Modal>
         </div>
     )
 }

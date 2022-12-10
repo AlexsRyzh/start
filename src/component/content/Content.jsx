@@ -11,7 +11,7 @@ import { useRef } from 'react';
 const Content = ({ title, children, edit = false }) => {
     const [openFilter, setOpenFilter] = useState(false)
     const value = useContext(Context)
-    const { lockScroll, unlockScroll } = useScrollLock();
+    const [lockScroll, unlockScroll] = useScrollLock();
     const nodeRef = useRef(null)
 
     useEffect(() => {
@@ -39,14 +39,25 @@ const Content = ({ title, children, edit = false }) => {
                             </div>
                         </RippleButton>
                     }
-                    {edit &&
-                        <Link to='/new-project'>
+                    {edit && value['windowSize'] > 1100 &&
+                        <Link to='/new-project' >
                             <RippleButton colorRipple='white' opacity={0.3} className={styles['ripple_btn'] + ' ' + styles['add_button']} duration={1000} >
                                 <div className={styles['filter_button']}>
                                     <span className={"material-symbols-rounded " + styles['icon_filter']}>
                                         add
                                     </span>
                                     <p className={styles['filter_text']}>Добавить</p>
+                                </div>
+                            </RippleButton>
+                        </Link>
+                    }
+                    {edit && value['windowSize'] < 1100 &&
+                        <Link to='/new-project' className={styles['add_fixed']} >
+                            <RippleButton colorRipple='white' opacity={0.3} className={styles['ripple_btn'] + ' ' + styles['ripple_btn_fixed']} duration={1000} >
+                                <div className={styles['filter_button']}>
+                                    <span className={"material-symbols-rounded " + styles['icon_add_menu']}>
+                                        add
+                                    </span>
                                 </div>
                             </RippleButton>
                         </Link>
@@ -72,7 +83,7 @@ const Content = ({ title, children, edit = false }) => {
 
             </InfiniteScroll> */}
             {children}
-        </div>
+        </div >
     )
 }
 

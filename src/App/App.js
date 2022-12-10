@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Routes, Route, BrowserRouter, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { MainPage } from '../pages/MainPage/MainPage';
 import ListProjectPage from '../pages/ListProjectPage/ListProjectPage';
 import ListProfilesPage from '../pages/ListProfilesPage/ListProfilesPage';
@@ -9,6 +9,8 @@ import MyProjectsPage from '../pages/MyProjects/MyProjectsPage'
 import ProjectPage from '../pages/ProjectPage/ProjectPage';
 import ProfilePage from '../pages/ProfilePage/ProfilePage'
 import MyProject from '../pages/MyProject/MyProject';
+
+
 
 const Wrapper = ({ }) => {
     const { pathname } = useLocation();
@@ -21,7 +23,6 @@ const Wrapper = ({ }) => {
 }
 
 const App = () => {
-
     return (
         <BrowserRouter>
             <Wrapper />
@@ -40,7 +41,6 @@ const App = () => {
                 </Route>
             </Routes>
         </BrowserRouter>
-
     )
 }
 

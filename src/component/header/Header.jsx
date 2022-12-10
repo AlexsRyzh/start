@@ -13,7 +13,7 @@ const Header = ({ name = "Alexs" }) => {
   const value = useContext(Context)
   const [active, setActive] = useState(false)
 
-  const { lockScroll, unlockScroll } = useScrollLock();
+  const [lockScroll, unlockScroll] = useScrollLock();
 
   useEffect(() => {
     if (value['hidd']) {

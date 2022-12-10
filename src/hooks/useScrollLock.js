@@ -8,8 +8,8 @@ export const useScrollLock = () => {
         document.body.style.overflow = '';
     }, []);
 
-    return {
+    return [
         lockScroll,
         unlockScroll
-    };
+    ];
 }
