@@ -8,14 +8,17 @@ import './animation_modal.css'
 import { useScrollLock } from '../../hooks/useScrollLock'
 import { useEffect } from 'react'
 import Sheet from 'react-modal-sheet';
-
+import { BottomSheet } from 'react-spring-bottom-sheet'
+import 'react-spring-bottom-sheet/dist/style.css'
 
 const Modal = ({ children, open = true, setOpen, title = "Название", }) => {
     const nodeRef = useRef(null)
     const value = useContext(Context)
     const [lockScroll, unlockScroll] = useScrollLock()
 
-
+    const onDismiss = () => {
+        setOpen(false)
+    }
 
 
     return (
@@ -43,16 +46,49 @@ const Modal = ({ children, open = true, setOpen, title = "Название", }) 
                 </CSSTransition>
             }
             {value['windowSize'] < 769 &&
-                <Sheet isOpen={open} onClose={() => setOpen(false)}>
-                    <Sheet.Container>
-                        <Sheet.Header />
-                        <Sheet.Content>
+                <>
+                    <button onClick={() => setOpen(true)}>Open</button>
+                    <BottomSheet open={open}
+                        skipInitialTransition
+                        onDismiss={onDismiss}
+                        defaultSnap={({ snapPoints, lastSnap }) =>
+                            lastSnap ?? Math.min(...snapPoints)
+                        }
+                        snapPoints={({ maxHeight }) => [
+                            maxHeight - maxHeight / 5,
+                            maxHeight * 0.6,
+                        ]}
+                        expandOnContentDrag={onDismiss}
+                    >
+                        <div className={styles['container']}>
+                            <div className={styles['header']}>
+                                <h1>{title}</h1>
+                                <span className={"material-symbols-rounded" + " " + styles['close_button']} onClick={() => {
+                                    setOpen()
+                                }}>
+                                    close
+                                </span>
+                            </div>
+                            <div className={styles['content']}>
+                                {children}
+                            </div>
+                        </div>
+                        <div className={styles['container']}>
+                            <div className={styles['header']}>
+                                <h1>{title}</h1>
+                                <span className={"material-symbols-rounded" + " " + styles['close_button']} onClick={() => {
+                                    setOpen()
+                                }}>
+                                    close
+                                </span>
+                            </div>
+                            <div className={styles['content']}>
+                                {children}
+                            </div>
+                        </div>
+                    </BottomSheet>
+                </>
 
-                        </Sheet.Content>
-                    </Sheet.Container>
-
-                    <Sheet.Backdrop />
-                </Sheet>
             }
 
         </>
