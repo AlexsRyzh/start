@@ -7,8 +7,7 @@ import BlockWithPen from '../../component/BlockWithPen/BlockWithPen'
 import LineTikets from '../../component/lineTikets/LineTikets'
 import RippleButton from '../../component/RippleButton/RippleButton'
 import ContentEditable from 'react-contenteditable'
-import Modal from '../../component/Modal/Modal'
-import AddImg from '../../component/AddImg/AddImg'
+import { Fb, Gt, Mail, Tg, Vk, Wt } from '../../component/ContactButton/ContactButton'
 
 const MyProject = ({ id = -1 }) => {
     const [title, setTitle] = useState(id === -1 ? "" : 'DevBuff')
@@ -48,7 +47,14 @@ const MyProject = ({ id = -1 }) => {
                 </BlockWithPen>
             </div>
             <div className={styles['contact']}>
-                <ContactLine />
+                <ContactLine>
+                    <Fb />
+                    <Tg />
+                    <Vk />
+                    <Wt />
+                    <Mail />
+                    <Gt />
+                </ContactLine>
             </div>
             <div className={styles['section']}>
                 <BlockWithPen DisleftPadding={true}>
@@ -78,9 +84,6 @@ const MyProject = ({ id = -1 }) => {
             <RippleButton colorRipple={'#fff'} className={styles['btn']} opacity={0.2}>
                 Сохранить
             </RippleButton>
-            <Modal open={openModal} setOpen={() => { setOpenModal(false) }} title={moduleTitle}>
-                <AddImg />
-            </Modal>
         </div>
     )
 }
